@@ -1,0 +1,2 @@
+clang -std=c99 -Wall -O0 -pedantic -g -I./include  -c -fPIC *.c
+clang -Wl,-rpath,. -L. -ltcod -lSDL_ttf -shared -Wl,-soname,libcio.so.1 -o libcio.so.1.0.1 *.o 
